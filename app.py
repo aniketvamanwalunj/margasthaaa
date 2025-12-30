@@ -4,8 +4,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("margasthaaa.html")   # index.html should be inside templates folder 
+    return render_template("margasthaaa.html")
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8000)  
-
+    app.run(
+        host="0.0.0.0",   # allow access from local Wi-Fi devices
+        port=5000,        # you can change to 8000, 8080, etc.
+        debug=True
+    )
